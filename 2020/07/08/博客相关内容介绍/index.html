@@ -28,7 +28,7 @@
 <meta property="og:description" content="作为一个初创博客的编程小白，跟着视频果然弄好一个博客，目的是记录我每天的学习，让我在以后能系统的梳理和回顾所学。在搭建博客的过程中我要到了许多生疏的概念或者名词，现在我把他们记录下来，逐个击破。 Hexo官网解释:Hexo是一个快速、简洁且高效的博客框架。他支持Markdown的所有功能。要通过hexo官网清楚你创建的blog文件里每个文件夹有什么作用，清楚几条创建博客的指令。 Markdown解">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-08T08:05:16.000Z">
-<meta property="article:modified_time" content="2020-07-08T10:53:58.306Z">
+<meta property="article:modified_time" content="2020-07-08T11:02:04.604Z">
 <meta property="article:author" content="DRS">
 <meta name="twitter:card" content="summary">
 
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-08 16:05:16 / 修改时间：18:53:58" itemprop="dateCreated datePublished" datetime="2020-07-08T16:05:16+08:00">2020-07-08</time>
+              <time title="创建时间：2020-07-08 16:05:16 / 修改时间：19:02:04" itemprop="dateCreated datePublished" datetime="2020-07-08T16:05:16+08:00">2020-07-08</time>
             </span>
 
           
@@ -266,23 +266,16 @@ cat         查看文件内容</code></pre><h1 id="环境变量"><a href="#环�
 <li><p>键入以下指令，替换为您的GitHub电子邮件地址。</p>
 <pre><code>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</code></pre></li>
 <li><p>当提示您“输入要在其中保存密钥的文件”时，请按Enter。这接受默认文件位置。</p>
-<blockquote>
-<p>Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]</p>
-</blockquote>
-</li>
+<pre><code>&gt; Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]</code></pre></li>
 <li><p>在提示符下，键入一个安全密码或设置为空。</p>
-<blockquote>
-<p>Enter passphrase (empty for no passphrase): [Type a passphrase]<br>Enter same passphrase again: [Type passphrase again]</p>
-</blockquote>
-</li>
+<pre><code>&gt; Enter passphrase (empty for no passphrase): [Type a passphrase]
+&gt; Enter same passphrase again: [Type passphrase again]</code></pre></li>
 </ol>
 <h2 id="步骤二：把SSH-Key添加到ssh-agent"><a href="#步骤二：把SSH-Key添加到ssh-agent" class="headerlink" title="步骤二：把SSH Key添加到ssh-agent"></a>步骤二：把SSH Key添加到ssh-agent</h2><ol>
 <li><p>键入下列指令启动ssh-agent。</p>
-<p>   eval $(ssh-agent -s)</p>
-</li>
+<pre><code>eval $(ssh-agent -s)</code></pre></li>
 <li><p>键入下列指令将SSH Key添加到ssh-agent。</p>
-<p> ssh-add ~/.ssh/id_rsa</p>
-</li>
+<pre><code>ssh-add ~/.ssh/id_rsa</code></pre></li>
 </ol>
 <h2 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h2><p>按操作装好ssh key后，发现用cmder编辑hexo d还是要输密码，但是用Git Blash键入hexo d则不需要密码，并且一些指令在Git Blash输入后正常，在cmder输入后不正常，我以后还是用Git Blash做控制台发博客较好。</p>
 
