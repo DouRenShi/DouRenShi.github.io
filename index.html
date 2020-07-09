@@ -188,7 +188,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-09 11:37:31 / 修改时间：12:42:01" itemprop="dateCreated datePublished" datetime="2020-07-09T11:37:31+08:00">2020-07-09</time>
+              <time title="创建时间：2020-07-09 11:37:31 / 修改时间：16:08:00" itemprop="dateCreated datePublished" datetime="2020-07-09T11:37:31+08:00">2020-07-09</time>
             </span>
 
           
@@ -202,11 +202,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="插入链接的两种方式"><a href="#插入链接的两种方式" class="headerlink" title="插入链接的两种方式"></a>插入链接的两种方式</h1><ol>
-<li>行内式</li>
-</ol>
-<hr>
-<ul>
+          <h1 id="插入链接的两种方式"><a href="#插入链接的两种方式" class="headerlink" title="插入链接的两种方式"></a>插入链接的两种方式</h1><h2 id="1-行内式"><a href="#1-行内式" class="headerlink" title="1.行内式"></a>1.行内式</h2><ul>
 <li>非本主机资源-绝对路径</li>
 </ul>
 <p>代码：</p>
@@ -219,11 +215,7 @@ This is [an example](https://www.baidu.com/ &quot;百度&quot;) inline link.</co
 <p>代码：</p>
 <pre><code>see my [About](/about/) page for details.</code></pre><p>效果：</p>
 <p>see my <a href="/about/">About</a> page for details.</p>
-<ol start="2">
-<li>参考式(<em>比较好读</em>)</li>
-</ol>
-<hr>
-<p>代码：</p>
+<h2 id="2-参考式-比较好读"><a href="#2-参考式-比较好读" class="headerlink" title="2.参考式(比较好读)"></a>2.参考式(<em>比较好读</em>)</h2><p>代码：</p>
 <pre><code>I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
 
 This is [an example][id] reference-style link.
@@ -242,23 +234,21 @@ Plise click [baidu][].
 <h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><ul>
 <li><p>第一步：安装插件，在hexo的根目录下打开Git Bash,执行如下指令：</p>
 <pre><code>npm install hexo-asset-image --save</code></pre></li>
-<li><p>第二步：&lt;用编辑器打开hexo的配置文件_config class=”yml”&gt;</p>
+<li><p>第二步：用编辑器打开hexo的配置文件_config.yml找到<code>post_asset_folder</code>，把这个选项从false改成true</p>
 </li>
-</ul>
-<p>找到<code>post_asset_folder</code>，把这个选项从false改成true</p>
-<ul>
-<li>第三步：打开node_modules/hexo-asset-image/index.js并将内容换为<a href="https://www.jianshu.com/p/f72aaad7b852" target="_blank" rel="noopener" title="DCBXZ的简书">如下代码</a></li>
+<li><p>第三步：打开node_modules/hexo-asset-image/index.js并将内容换为<a href="https://www.jianshu.com/p/f72aaad7b852" target="_blank" rel="noopener" title="DCBXZ的简书">如下代码</a></p>
+</li>
 </ul>
 <ul>
 <li>第四步：以行内式插入本地图片</li>
 </ul>
-<p>最前面是英文的感叹号，之后中括号里是图片的替代文字，之后的小括号内是图片的路径，注意图片放在与所建博客同名的文件夹下。</p>
-<p>代码格式：</p>
+<p>代码格式：最前面是英文的感叹号，之后中括号里是图片的替代文字，之后的小括号内是图片的路径，注意图片放在与所建博客同名的文件夹下。</p>
 <pre><code>![这是代替图片的文字，随便写](Hexo博客插入链接和图片/avatar.jpg)</code></pre><p>这是插入图片后的样子</p>
 <p><img src="/2020/07/09/Hexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E9%93%BE%E6%8E%A5%E5%92%8C%E5%9B%BE%E7%89%87/avatar.jpg" alt="这是代替图片的文字，随便写"></p>
 <p>参考链接：</p>
 <p><a href="https://www.jianshu.com/p/f72aaad7b852" target="_blank" rel="noopener">https://www.jianshu.com/p/f72aaad7b852</a></p>
 <p><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">https://blog.csdn.net/xjm850552586/article/details/84101345</a></p>
+<p><a href="https://blog.csdn.net/qq_38148394/article/details/79997971" target="_blank" rel="noopener">https://blog.csdn.net/qq_38148394/article/details/79997971</a></p>
 
       
     </div>
