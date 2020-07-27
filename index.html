@@ -133,7 +133,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
 
   </li>
   </ul>
@@ -159,6 +159,94 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="DRS">
+      <meta itemprop="description" content="坚持这个词听起来就要费好大力气的，做喜欢的事从来不叫坚持，比如写Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Struggle">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/" class="post-title-link" itemprop="url">labview第三课</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-27 17:02:24 / 修改时间：17:24:30" itemprop="dateCreated datePublished" datetime="2020-07-27T17:02:24+08:00">2020-07-27</time>
+            </span>
+
+          
+            <span id="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/" class="post-meta-item leancloud_visitors" data-flag-title="labview第三课" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天主要在练习中级计算器的制作，应用了labview数据流的思想使程序编写简洁，遇到了两个问题：</p>
+<ol>
+<li>移位寄存器一定要在循环外创建显示控件吗？</li>
+</ol>
+<p>答：只有循环终止后才会将最终值返回到右边的移位寄存器的右侧，也就是说循环没有停止移位寄存器右侧的输出显示控件就不会有输出。如果希望输出控件随着循环的进行不断刷新，应当将显示控件创建在右面显示控件的左侧。</p>
+<ol start="2">
+<li>当用到事件结构时，例如“布尔型按钮值改变”作为事件分值，在程序框图面板将“布尔按钮”放入相应的事件结构的事件分支程序框内有什么区别？</li>
+</ol>
+<p>有些奇怪哦，当“布尔按钮”放入事件分支后，运行程序时，点击按钮按钮会回弹。若不放入事件分支则运行程序时，点击按钮不会回弹。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -883,7 +971,7 @@ This is [an example](https://www.baidu.com/ &quot;百度&quot;) inline link.</co
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
