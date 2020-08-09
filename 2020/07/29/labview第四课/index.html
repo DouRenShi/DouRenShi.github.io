@@ -20,18 +20,22 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="第四课要实现的项目是手机远程控制电脑，可能需要几天时间完成，在本篇陆续更新。 29号练习了如何修改布尔灯和滚动条的样式，对于事件结构的锁定前面板的作用不太清楚。学会了来填坑。">
+  <meta name="description" content="第四课要实现的项目是手机远程控制电脑，可能需要几天时间完成，在本篇陆续更新。 声音播放功能的实现主要用到声音播放文件、声音输出信息、声音输出清零。首先“声音播放文件”根据指定的文件路径播放声音文件，将“声音输出信息”放在while循环内，判断声音是否输出完毕、是否出现错误、是否超时来决定是否退出while循环，然后声音输出清零。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="labview第四课">
 <meta property="og:url" content="http://yoursite.com/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/index.html">
 <meta property="og:site_name" content="Struggle">
-<meta property="og:description" content="第四课要实现的项目是手机远程控制电脑，可能需要几天时间完成，在本篇陆续更新。 29号练习了如何修改布尔灯和滚动条的样式，对于事件结构的锁定前面板的作用不太清楚。学会了来填坑。">
+<meta property="og:description" content="第四课要实现的项目是手机远程控制电脑，可能需要几天时间完成，在本篇陆续更新。 声音播放功能的实现主要用到声音播放文件、声音输出信息、声音输出清零。首先“声音播放文件”根据指定的文件路径播放声音文件，将“声音输出信息”放在while循环内，判断声音是否输出完毕、是否出现错误、是否超时来决定是否退出while循环，然后声音输出清零。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/audio.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/glide.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/front-panel.jpg">
 <meta property="article:published_time" content="2020-07-29T15:01:49.000Z">
-<meta property="article:modified_time" content="2020-07-29T15:12:58.101Z">
+<meta property="article:modified_time" content="2020-08-09T03:59:05.803Z">
 <meta property="article:author" content="DRS">
 <meta property="article:tag" content="labview">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/audio.jpg">
 
 <link rel="canonical" href="http://yoursite.com/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/">
 
@@ -189,10 +193,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-07-29 23:01:49 / 修改时间：23:12:58" itemprop="dateCreated datePublished" datetime="2020-07-29T23:01:49+08:00">2020-07-29</time>
+              <time title="创建时间：2020-07-29 23:01:49" itemprop="dateCreated datePublished" datetime="2020-07-29T23:01:49+08:00">2020-07-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-09 11:59:05" itemprop="dateModified" datetime="2020-08-09T11:59:05+08:00">2020-08-09</time>
+              </span>
 
           
             <span id="/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/" class="post-meta-item leancloud_visitors" data-flag-title="labview第四课" title="阅读次数">
@@ -227,7 +237,16 @@
 
       
         <p>第四课要实现的项目是手机远程控制电脑，可能需要几天时间完成，在本篇陆续更新。</p>
-<p>29号练习了如何修改布尔灯和滚动条的样式，对于事件结构的锁定前面板的作用不太清楚。学会了来填坑。</p>
+<h1 id="声音播放功能的实现"><a href="#声音播放功能的实现" class="headerlink" title="声音播放功能的实现"></a>声音播放功能的实现</h1><p>主要用到声音播放文件、声音输出信息、声音输出清零。首先“声音播放文件”根据指定的文件路径播放声音文件，将“声音输出信息”放在while循环内，判断声音是否输出完毕、是否出现错误、是否超时来决定是否退出while循环，然后声音输出清零。</p>
+<a id="more"></a>
+<p><img src="/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/audio.jpg" alt="音频播放程序框图"></p>
+<h1 id="改变布尔灯的外观制作自定义控件"><a href="#改变布尔灯的外观制作自定义控件" class="headerlink" title="改变布尔灯的外观制作自定义控件"></a>改变布尔灯的外观制作自定义控件</h1><p>先准备好替代布尔灯亮灭两个状态的图片，在前面板上放置一个布尔灯，右键选择制作自定义控件，然后将准备好的图片替换掉原有的图片。主要体现了原有的各种不同形状的灯其实也是图片组成的思想。</p>
+<h1 id="滚动条的设置"><a href="#滚动条的设置" class="headerlink" title="滚动条的设置"></a>滚动条的设置</h1><p>这一步骤主要应用在了界面的美化，应用数值选板中的水平滑动杆，将滑动杆的运功部分用制作好的图片替代，再用while循环和条件结构制作出数值从0逐渐递增到99再逐渐递减到0的循环，就可实现滑动杆的左右周期性运动，行成运动广告的效果。<br><img src="/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/glide.jpg" alt="滑动杆两种程序实现"></p>
+<h1 id="配置的保存与读取"><a href="#配置的保存与读取" class="headerlink" title="配置的保存与读取"></a>配置的保存与读取</h1><p>配置保存用到：打开配置数据、读取键、关闭配置数据。配置保存用到：打开配置数据、写入键、关闭配置数据。读取键包含段、键、值、数据类型信息。</p>
+<h1 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h1><p>这一块我不是太熟悉，虽然大学学过相关的知识，也应用过ping等等操作，由于对底层原理不熟悉所以一直稀里糊涂的，正值暑假我要系统的补习一下这块知识，开一章TCP/IP专题，毕竟只有理解了才能更好的记忆。</p>
+<h1 id="多种方法实现控制电脑"><a href="#多种方法实现控制电脑" class="headerlink" title="多种方法实现控制电脑"></a>多种方法实现控制电脑</h1><p>用到了执行系统命令、调用库函数节点，跟使用Windows自带的cmd终端窗口输入命令有相同的效果，其原理是通过Windows提供的API接口函数实现控制功能。</p>
+<p>这是我对API的理解：你有一个知乎账号A，而你喜欢看知乎小黄文，因为文章标题比较隐晦你总是苦苦寻找无果。后来你发现了另一个知乎账号B,B是个人工智能AI控制的账号，B会自动识别标题隐晦的小黄文并点赞收藏，后来你再也没有自己找过小黄文，你只需要看账号B点赞过的文章就可以了。在这里账号B对于你来说就是一个API接口。你虽然不了解B账号是如何找到小黄文的，但你看小黄文的目的达到了。同理我们Windows提供了API接口，只要我们输入正确的函数就可以实现控制电脑关机、锁屏、重启等功能，但你不知道他内部的实现原理。</p>
+<h1 id="程序的详细实现"><a href="#程序的详细实现" class="headerlink" title="程序的详细实现"></a>程序的详细实现</h1><p>首先是前面板的装饰以及输入数输出控件及数据类型的确定，而后转战程序框图面板，实现与远程站点的TCP连接登录。将接受到的信息解码输出显示以及窗口滚动到最底部等。<br><img src="/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/front-panel.jpg" alt="软件前面板展示"></p>
 
     </div>
 
@@ -309,6 +328,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#声音播放功能的实现"><span class="nav-number">1.</span> <span class="nav-text">声音播放功能的实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#改变布尔灯的外观制作自定义控件"><span class="nav-number">2.</span> <span class="nav-text">改变布尔灯的外观制作自定义控件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#滚动条的设置"><span class="nav-number">3.</span> <span class="nav-text">滚动条的设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置的保存与读取"><span class="nav-number">4.</span> <span class="nav-text">配置的保存与读取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP协议"><span class="nav-number">5.</span> <span class="nav-text">TCP协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多种方法实现控制电脑"><span class="nav-number">6.</span> <span class="nav-text">多种方法实现控制电脑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序的详细实现"><span class="nav-number">7.</span> <span class="nav-text">程序的详细实现</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
