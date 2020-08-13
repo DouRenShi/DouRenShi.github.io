@@ -20,22 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="今天主要在练习中级计算器的制作，应用了labview数据流的思想使程序编写简洁，遇到了两个问题：  移位寄存器一定要在循环外创建显示控件吗？  答：只有循环终止后才会将最终值返回到右边的移位寄存器的右侧，也就是说循环没有停止移位寄存器右侧的输出显示控件就不会有输出。如果希望输出控件随着循环的进行不断刷新，应当将显示控件创建在右面显示控件的左侧。  当用到事件结构时，例如“布尔型按钮值改变”作为事件">
+  <meta name="description" content="简介TCP&#x2F;IP协议是网络使用中最基本的通信协议，严格来说有四层体系结构：应用层、传输层、网络层、数据链路成。每一层有不同的协议，由于TCP协议和IP协议更具代表性，所以取名为TCP&#x2F;IP协议。 自上而下四层结构 应用层：处理特定的应用程序细节，协议有Talent、FTP、e-mail、SMTP等。  传输层：为两台主机上的应用程序提供端到端的通讯，协议有TCP、UDP等。  网络层：处理分组在网">
 <meta property="og:type" content="article">
-<meta property="og:title" content="labview第三课">
-<meta property="og:url" content="http://yoursite.com/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/index.html">
+<meta property="og:title" content="TCP&#x2F;IP协议简介">
+<meta property="og:url" content="http://yoursite.com/2020/08/09/TCP-IP%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Struggle">
-<meta property="og:description" content="今天主要在练习中级计算器的制作，应用了labview数据流的思想使程序编写简洁，遇到了两个问题：  移位寄存器一定要在循环外创建显示控件吗？  答：只有循环终止后才会将最终值返回到右边的移位寄存器的右侧，也就是说循环没有停止移位寄存器右侧的输出显示控件就不会有输出。如果希望输出控件随着循环的进行不断刷新，应当将显示控件创建在右面显示控件的左侧。  当用到事件结构时，例如“布尔型按钮值改变”作为事件">
+<meta property="og:description" content="简介TCP&#x2F;IP协议是网络使用中最基本的通信协议，严格来说有四层体系结构：应用层、传输层、网络层、数据链路成。每一层有不同的协议，由于TCP协议和IP协议更具代表性，所以取名为TCP&#x2F;IP协议。 自上而下四层结构 应用层：处理特定的应用程序细节，协议有Talent、FTP、e-mail、SMTP等。  传输层：为两台主机上的应用程序提供端到端的通讯，协议有TCP、UDP等。  网络层：处理分组在网">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/calculation.png">
-<meta property="article:published_time" content="2020-07-27T09:02:24.000Z">
-<meta property="article:modified_time" content="2020-07-29T14:59:08.512Z">
+<meta property="article:published_time" content="2020-08-09T08:35:24.000Z">
+<meta property="article:modified_time" content="2020-08-13T05:28:32.523Z">
 <meta property="article:author" content="DRS">
-<meta property="article:tag" content="labview">
+<meta property="article:tag" content="TCP&#x2F;IP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/calculation.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/">
+<link rel="canonical" href="http://yoursite.com/2020/08/09/TCP-IP%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B/">
 
 
 <script id="page-configurations">
@@ -48,7 +46,7 @@
   };
 </script>
 
-  <title>labview第三课 | Struggle</title>
+  <title>TCP/IP协议简介 | Struggle</title>
   
 
 
@@ -169,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/09/TCP-IP%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -182,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          labview第三课
+          TCP/IP协议简介
         </h1>
 
         <div class="post-meta">
@@ -192,18 +190,18 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-07-27 17:02:24" itemprop="dateCreated datePublished" datetime="2020-07-27T17:02:24+08:00">2020-07-27</time>
+              <time title="创建时间：2020-08-09 16:35:24" itemprop="dateCreated datePublished" datetime="2020-08-09T16:35:24+08:00">2020-08-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-29 22:59:08" itemprop="dateModified" datetime="2020-07-29T22:59:08+08:00">2020-07-29</time>
+                <time title="修改时间：2020-08-13 13:28:32" itemprop="dateModified" datetime="2020-08-13T13:28:32+08:00">2020-08-13</time>
               </span>
 
           
-            <span id="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/" class="post-meta-item leancloud_visitors" data-flag-title="labview第三课" title="阅读次数">
+            <span id="/2020/08/09/TCP-IP%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B/" class="post-meta-item leancloud_visitors" data-flag-title="TCP/IP协议简介" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -218,8 +216,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/08/09/TCP-IP%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/09/TCP-IP%E5%8D%8F%E8%AE%AE%E7%AE%80%E4%BB%8B/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -234,16 +232,51 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>今天主要在练习中级计算器的制作，应用了labview数据流的思想使程序编写简洁，遇到了两个问题：</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>TCP/IP协议是网络使用中最基本的通信协议，严格来说有四层体系结构：应用层、传输层、网络层、数据链路成。每一层有不同的协议，由于TCP协议和IP协议更具代表性，所以取名为TCP/IP协议。</p>
+<h1 id="自上而下四层结构"><a href="#自上而下四层结构" class="headerlink" title="自上而下四层结构"></a>自上而下四层结构</h1><ol>
+<li><p>应用层：处理特定的应用程序细节，协议有Talent、FTP、e-mail、SMTP等。</p>
+</li>
+<li><p>传输层：为两台主机上的应用程序提供端到端的通讯，协议有TCP、UDP等。</p>
+</li>
+<li><p>网络层：处理分组在网络中的活动，例如分组选路，协议有IP、ICMP、IGMP等。</p>
+</li>
+<li><p>链路层：处理与电缆（或其他任何传输媒介）的物理接口细节，协议有RARP、ARP等。</p>
+</li>
+</ol>
+<a id="more"></a>
+
+<h1 id="对于四层网络结构形象的比喻"><a href="#对于四层网络结构形象的比喻" class="headerlink" title="对于四层网络结构形象的比喻"></a>对于四层网络结构形象的比喻</h1><p>先把主机和服务器分别想象成两栋大厦</p>
+<p>应用层（FTP协议）：应用层就像是在特定城市特定大厦特定房间的某一个用户，应用层通讯就像两个不同用户之间发送的信，这个信是点对点的，从一个用户（某一主机内特定应用程序）到另一用户（另一主机特定应用程序）。一个主机（大厦）可能有很多的应用程序（客户），我们如何区分它们呢？实际生活中我们用房间号，在电脑内部区分不同应用程序我们用端口号。</p>
+<p>传输层（TCP协议）：用户写好了信，需要给信套上信封，并且写好发件人所在大厦和收件人所在大厦，实际生活中的大厦完全可以类比为我们的计算机和服务器，传输层（TCP）就是在两个不同主机之间传输信息的协议。</p>
+<p>网络层（IP协议）：邮件准备好了，他首先会被送到本城市的快递公司，并且被打包，包裹上会写着源是重庆快递公司，目的地是沈阳快递公司，但是重庆快递公司发现他不能直接发货到沈阳，需要通过北京快递公司进行中转，所以虽然目的地是沈阳，但是他首先把这个包裹发给了北京，某个城市的快递公司就像IP协议，要抵达目的地的协议要查询路由表，如果发现目的的地址不是直接就寻找下一跳，通过了解决快递公司的工作，我们了解到IP协议是逐跳工作的，每一跳（路由器）根据目的IP地址查询下一跳，并且最终转发到目的地。</p>
+<p>链路层（以太网）：重庆快递公司已经知道需要把包裹发送给北京快递公司了，现在他就把包裹送到重庆火车站，搭上去往北京的火车，然后在北京火车站卸货，然后送到北京快递公司，北京快递公司再判断下一跳为沈阳快递公司，并且选择适当的方式，例如：汽车，最后通过这种方式送到目的地沈阳快递公司。链路层协议就像包裹的运输方式，我们可以选择以太网（火车），也可以选择令牌环（汽车）。并且链路层协议是逐介质的，从一个网卡（重庆火车站）到另外一个网卡，（北京火车站）所以你会发现一个数据包从源到目的，IP地址总是不变的（源是重庆快递公司，目的是沈阳快递公司），但是链路层协议却在不断变化，第一跳源是重庆火车站，目的是北京火车站，第二跳源是北京汽车站，目的是沈阳汽车站。</p>
+<p>应用数据需要经过TCP/IP每一层处理之后才能通过网络传输到目的端，每一层上都使用该层的协议数据单元PDU（Protocol Data Unit）彼此交换信息。</p>
+<p>不同层的PDU中包含有不同的信息，因此PDU在不同层被赋予了不同的名称。</p>
 <ol>
-<li>移位寄存器一定要在循环外创建显示控件吗？</li>
+<li>如上层数据在传输层添加TCP报头后得到的PDU被称为Segment（数据段 ）</li>
+<li>数据段被传递给网络层，网络层添加IP报头得到的PDU被称为Packet（数据包）</li>
+<li>数据包被传递到数据链路层，封装数据链路层报头得到的PDU被称为Frame（数据帧）</li>
+<li>最后，帧被转换为比特(物理层)<br>通过网络介质传输。这种协议栈逐层向下传递数据，并添加报头和报尾的过程称为封装。</li>
 </ol>
-<p>答：只有循环终止后才会将最终值返回到右边的移位寄存器的右侧，也就是说循环没有停止移位寄存器右侧的输出显示控件就不会有输出。如果希望输出控件随着循环的进行不断刷新，应当将显示控件创建在右面显示控件的左侧。</p>
-<ol start="2">
-<li>当用到事件结构时，例如“布尔型按钮值改变”作为事件分值，在程序框图面板将“布尔按钮”放入相应的事件结构的事件分支程序框内有什么区别？</li>
+<h1 id="需要注意的点"><a href="#需要注意的点" class="headerlink" title="需要注意的点"></a>需要注意的点</h1><ol>
+<li>应用层和传输层需要用到端到端（end-to-end）协议。</li>
+<li>网络层提供的是逐跳（hop-to-hop）协议。</li>
+<li>网络ip提供的是一种不可靠的服务，他只是尽可能快的把分组从源节点送到目的节点，但不提供可靠性保障。</li>
 </ol>
-<p>有些奇怪哦，当“布尔按钮”放入事件分支后，运行程序时，点击按钮按钮会回弹。若不放入事件分支则运行程序时，点击按钮不会回弹。</p>
-<p><img src="/2020/07/27/labview%E7%AC%AC%E4%B8%89%E8%AF%BE/calculation.png" alt="计算器"></p>
+<h1 id="以太网（链路层）"><a href="#以太网（链路层）" class="headerlink" title="以太网（链路层）"></a>以太网（链路层）</h1><p>以太网是一种计算机局域网技术。IEEE组织的IEEE 802.3标准制定了以太网的技术标准，它规定了包括物理层的连线、电子信号和介质访问层协议的内容。目前以太网的拓扑结构一般为星型，但逻辑上为总线型。</p>
+<p>以太网是目前应用最普遍的局域网技术，以太网中使用交换机连接不同的计算机。</p>
+<p>以太网是一种广播（Broadcast）类型的网络：利用一个共同的传输介质把个站点连接起来，无线网和总线型网络属于这种类型。</p>
+<p>同一个以太网中的计算机通信时，要符合以太网帧的格式，帧的格式有Ethernet_II、IEEE_802.3两种,选择哪种格式由TCP/IP协议簇中的网络层决定，前者最为常用。</p>
+<p>Ethernet_II的帧中各字段说明如下：</p>
+<ol>
+<li>DMAC（Destination MAC）是目的MAC地址。DMAC字段长度为6个字节，标识帧的接收者。</li>
+<li>SMAC（Source MAC）是源MAC地址。SMAC字段长度为6个字节，标识帧的发送者。</li>
+<li>类型字段（Type）用于标识数据字段中包含的高层协议，该字段长度为2个字节。类型字段取值为0x0800的帧代表IP协议帧；类型字段取值为0806的帧代表ARP协议帧。</li>
+<li>数据字段(Data)是网络层数据，最小长度必须为46字节以保证帧长至少为64字节，数据字段的最大长度为1500字节。</li>
+<li>循环冗余校验字段（FCS）提供了一种错误检测机制。该字段长度为4个字节。</li>
+</ol>
+<p>以太帧中包括源和目的MAC地址，即以太网中计算机是基于计算机的物理地址即MAC通信的，而不是IP地址，而MAC地址是在由设备的网卡决定且固定不变的。</p>
+<p>以arp广播的方式获取局域网内计算机的“MAC地址”。发送arp广播，局域网所有计算机都能收到，如在教室里喊：“谁是某某某（IP）？”，某同学站起来说：“是我（MAC地址）。”这时你就知道某同学的的“MAC地址”。注意这时，其他同学也能听到你喊，但他们没有理会（丢弃）。</p>
 
     </div>
 
@@ -253,7 +286,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/labview/" rel="tag"><i class="fa fa-tag"></i> labview</a>
+              <a href="/tags/TCP-IP/" rel="tag"><i class="fa fa-tag"></i> TCP/IP</a>
           </div>
 
         
@@ -262,12 +295,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/07/24/labview%E7%AC%AC%E4%BA%8C%E8%AF%BE/" rel="prev" title="labview第二课">
-      <i class="fa fa-chevron-left"></i> labview第二课
+    <a href="/2020/07/29/labview%E7%AC%AC%E5%9B%9B%E8%AF%BE/" rel="prev" title="labview第四课">
+      <i class="fa fa-chevron-left"></i> labview第四课
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/07/28/labVIEW%E7%9A%84%E9%94%99%E8%AF%AF%E7%B0%87/" rel="next" title="labVIEW的错误簇">
-      labVIEW的错误簇 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/08/13/%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%B8%8E%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84/" rel="next" title="绝对路径与相对路径">
+      绝对路径与相对路径 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -328,6 +361,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自上而下四层结构"><span class="nav-number">2.</span> <span class="nav-text">自上而下四层结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对于四层网络结构形象的比喻"><span class="nav-number">3.</span> <span class="nav-text">对于四层网络结构形象的比喻</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需要注意的点"><span class="nav-number">4.</span> <span class="nav-text">需要注意的点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以太网（链路层）"><span class="nav-number">5.</span> <span class="nav-text">以太网（链路层）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
